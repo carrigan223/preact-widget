@@ -16,11 +16,11 @@ export default class ArrowIcon extends Component<IArrowIconProps, any> {
                     xmlns="http://www.w3.org/2000/svg">
                         <line x1="1" y1="15"
                             x2="15" y2="1"
-                            stroke="white"
+                            stroke="black"
                             stroke-width="1"/>
                         <line x1="1" y1="1"
                             x2="15" y2="15"
-                            stroke="white"
+                            stroke="black"
                             stroke-width="1"/>
                     </svg>
                     :

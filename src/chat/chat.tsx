@@ -16,8 +16,8 @@ export default class Chat extends Component<IChatProps, IChatState> {
         this.botman = botman;
         this.botman.setUserId(this.props.userId);
         this.botman.setChatServer(this.props.conf.chatServer);
-        //this.state.messages = [];
-        //this.state.replyType = ReplyType.Text;
+        // this.state.messages = [];
+        // this.state.replyType = ReplyType.Text;
         this.setState({ messages : [] });
         this.setState({ replyType : ReplyType.Text });
     }
@@ -73,6 +73,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
     render({}, state: IChatState) {
         return (
             <div>
+                {/*THIS IS THE CHAT WINDOW UNDER THE HEADER */}
                 <div id="messageArea">
                     <MessageArea
                         messages={state.messages}
@@ -97,7 +98,6 @@ export default class Chat extends Component<IChatProps, IChatState> {
 
                 {this.state.replyType === ReplyType.TextArea ? (
                     <div>
-
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                              onClick={this.handleSendClick}
                              style="cursor: pointer; position: absolute; width: 25px; bottom: 19px; right: 16px; z-index: 1000"
@@ -118,6 +118,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
                             }}
                             autofocus
                         />
+                        hello
                     </div>
                 ) : ''}
 
