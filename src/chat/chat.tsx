@@ -1,11 +1,10 @@
 import { h, Component } from "preact";
 import MessageArea from "./message-area";
 import { botman } from "./botman";
-import {IMessage, IConfiguration} from "../typings";
+import { IMessage, IConfiguration } from "../typings";
 
 export default class Chat extends Component<IChatProps, IChatState> {
-
-    [key: string]: any
+    [key: string]: any;
     botman: any;
     input: HTMLInputElement;
     textarea: HTMLInputElement;
@@ -18,8 +17,8 @@ export default class Chat extends Component<IChatProps, IChatState> {
         this.botman.setChatServer(this.props.conf.chatServer);
         // this.state.messages = [];
         // this.state.replyType = ReplyType.Text;
-        this.setState({ messages : [] });
-        this.setState({ replyType : ReplyType.Text });
+        this.setState({ messages: [] });
+        this.setState({ replyType: ReplyType.Text });
     }
 
     componentDidMount() {
@@ -27,7 +26,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
             this.writeToMessages({
                 text: this.props.conf.introMessage,
                 type: "text",
-                from: "chatbot"
+                from: "chatbot",
             });
         }
         // Add event listener for widget API
@@ -44,7 +43,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
         this.writeToMessages({
             text,
             type: "text",
-            from: "chatbot"
+            from: "chatbot",
         });
     }
 
@@ -52,7 +51,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
         const message: IMessage = {
             text,
             type: "text",
-            from: "visitor"
+            from: "visitor",
         };
 
         // Send a message from the html user to the server
@@ -88,23 +87,29 @@ export default class Chat extends Component<IChatProps, IChatState> {
                         class="textarea"
                         type="text"
                         placeholder={this.props.conf.placeholderText}
-                        ref={input => {
+                        ref={(input) => {
                             this.input = input as HTMLInputElement;
                         }}
                         onKeyPress={this.handleKeyPress}
                         autofocus
                     />
-                ) : ''}
+                ) : (
+                    ""
+                )}
 
                 {this.state.replyType === ReplyType.TextArea ? (
                     <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                             onClick={this.handleSendClick}
-                             style="cursor: pointer; position: absolute; width: 25px; bottom: 19px; right: 16px; z-index: 1000"
-                             viewBox="0 0 535.5 535.5">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            x="0px"
+                            y="0px"
+                            onClick={this.handleSendClick}
+                            style="cursor: pointer; position: absolute; width: 25px; bottom: 19px; right: 16px; z-index: 1000"
+                            viewBox="0 0 535.5 535.5"
+                        >
                             <g>
                                 <g id="send">
-                                    <polygon points="0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75"/>
+                                    <polygon points="0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75" />
                                 </g>
                             </g>
                         </svg>
@@ -113,16 +118,21 @@ export default class Chat extends Component<IChatProps, IChatState> {
                             id="userText"
                             class="textarea"
                             placeholder={this.props.conf.placeholderText}
-                            ref={input => {
+                            ref={(input) => {
                                 this.textarea = input as HTMLInputElement;
                             }}
                             autofocus
                         />
-                        hello
                     </div>
-                ) : ''}
+                ) : (
+                    ""
+                )}
 
-                <a class="banner" href={this.props.conf.aboutLink} target="_blank">
+                <a
+                    class="banner"
+                    href={this.props.conf.aboutLink}
+                    target="_blank"
+                >
                     {this.props.conf.aboutText === "AboutIcon" ? (
                         <svg
                             style="position: absolute; width: 14px; bottom: 6px; right: 6px;"
@@ -157,30 +167,31 @@ export default class Chat extends Component<IChatProps, IChatState> {
     };
 
     static generateUuid() {
-        let uuid = '', ii;
+        let uuid = "",
+            ii;
         for (ii = 0; ii < 32; ii += 1) {
             switch (ii) {
                 case 8:
                 case 20:
-                    uuid += '-';
-                    uuid += (Math.random() * 16 | 0).toString(16);
+                    uuid += "-";
+                    uuid += ((Math.random() * 16) | 0).toString(16);
                     break;
                 case 12:
-                    uuid += '-';
-                    uuid += '4';
+                    uuid += "-";
+                    uuid += "4";
                     break;
                 case 16:
-                    uuid += '-';
-                    uuid += (Math.random() * 4 | 8).toString(16);
+                    uuid += "-";
+                    uuid += ((Math.random() * 4) | 8).toString(16);
                     break;
                 default:
-                    uuid += (Math.random() * 16 | 0).toString(16);
+                    uuid += ((Math.random() * 16) | 0).toString(16);
             }
         }
         return uuid;
     }
 
-	writeToMessages = (msg: IMessage) => {
+    writeToMessages = (msg: IMessage) => {
         if (typeof msg.time === "undefined") {
             msg.time = new Date().toJSON();
         }
@@ -194,36 +205,36 @@ export default class Chat extends Component<IChatProps, IChatState> {
             msg.id = Chat.generateUuid();
         }
 
-	    if (msg.attachment === null) {
-	        msg.attachment = {}; // TODO: This renders IAttachment useless
-	    }
+        if (msg.attachment === null) {
+            msg.attachment = {}; // TODO: This renders IAttachment useless
+        }
 
-	    this.state.messages.push(msg);
-	    this.setState({
-	        messages: this.state.messages
-	    });
+        this.state.messages.push(msg);
+        this.setState({
+            messages: this.state.messages,
+        });
 
-	    if (msg.additionalParameters && msg.additionalParameters.replyType) {
-	        this.setState({
-                replyType: msg.additionalParameters.replyType
+        if (msg.additionalParameters && msg.additionalParameters.replyType) {
+            this.setState({
+                replyType: msg.additionalParameters.replyType,
             });
         }
-	};
+    };
 }
 
 interface IChatProps {
-    userId: string,
-    conf: IConfiguration
+    userId: string;
+    conf: IConfiguration;
 }
 
 enum ReplyType {
     Text = "text",
 
-    TextArea = "textarea"
+    TextArea = "textarea",
 }
 
 interface IChatState {
-    messages: IMessage[],
+    messages: IMessage[];
 
-    replyType: string,
+    replyType: string;
 }

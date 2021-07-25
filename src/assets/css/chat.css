@@ -52,6 +52,7 @@ body {
     -ms-flex-order: 1;
     order: 1;
     border-top-right-radius: 2px;
+    background: lightgrey;
 }
 
 .chatbot .msg {
@@ -70,7 +71,7 @@ body {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background: #dae1e7;
+    background: rgba(209, 184, 83, 0.4);
 }
 
 .msg p {
@@ -109,6 +110,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     background: rgba(250, 250, 250, 0.8);
+    border-top: 1px solid black;
 }
 
 .textarea:focus {
