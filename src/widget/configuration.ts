@@ -5,7 +5,7 @@ export const defaultConfiguration: IConfiguration = {
     frameEndpoint: "/botman/chat",
     timeFormat: "HH:MM",
     dateTimeFormat: "m/d/yy HH:MM",
-    title: "BUZZ",
+    title: "",
     cookieValidInDays: 1,
     introMessage: "",
     placeholderText: "Send a message...",

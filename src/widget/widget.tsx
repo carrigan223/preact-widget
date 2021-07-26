@@ -93,7 +93,9 @@ export default class Widget extends Component<any, IWidgetState> {
                     isChatOpen ? (
                         <div
                             style={{
-                                background: conf.mainColor,
+                                background: "rgb(209,184,83)",
+                                backgroundImage:
+                                    "linear-gradient(276deg, rgba(209,184,83,1) 8%, rgba(255,255,255,1) 100%)",
                                 ...desktopTitleStyle,
                             }}
                             onClick={this.toggle}

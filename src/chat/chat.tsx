@@ -70,6 +70,8 @@ export default class Chat extends Component<IChatProps, IChatState> {
     }
 
     render({}, state: IChatState) {
+        console.log("replytype", this.state.replyType);
+
         return (
             <div>
                 {/*THIS IS THE CHAT WINDOW UNDER THE HEADER */}
@@ -82,17 +84,35 @@ export default class Chat extends Component<IChatProps, IChatState> {
                 </div>
 
                 {this.state.replyType === ReplyType.Text ? (
-                    <input
-                        id="userText"
-                        class="textarea"
-                        type="text"
-                        placeholder={this.props.conf.placeholderText}
-                        ref={(input) => {
-                            this.input = input as HTMLInputElement;
-                        }}
-                        onKeyPress={this.handleKeyPress}
-                        autofocus
-                    />
+                    <div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            x="0px"
+                            y="0px"
+                            onClick={this.handleSubmitClick}
+                            style="cursor: pointer; position: absolute; width: 25px; bottom: 19px; right: 16px; z-index: 1000;"
+                            viewBox="0 0 535.5 535.5"
+                            fill="#D1B853"
+                        >
+                            <g>
+                                <g id="send">
+                                    <polygon points="0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75" />
+                                </g>
+                            </g>
+                        </svg>
+
+                        <input
+                            id="userText"
+                            class="textarea"
+                            type="text"
+                            placeholder={this.props.conf.placeholderText}
+                            ref={(input) => {
+                                this.input = input as HTMLInputElement;
+                            }}
+                            onKeyPress={this.handleKeyPress}
+                            autofocus
+                        />
+                    </div>
                 ) : (
                     ""
                 )}
@@ -150,6 +170,8 @@ export default class Chat extends Component<IChatProps, IChatState> {
         );
     }
 
+
+    //enter key submiting input.value
     handleKeyPress = (e: KeyboardEvent) => {
         if (e.keyCode === 13 && this.input.value.replace(/\s/g, "")) {
             this.say(this.input.value);
@@ -157,6 +179,14 @@ export default class Chat extends Component<IChatProps, IChatState> {
             // Reset input value
             this.input.value = "";
         }
+    };
+
+    //button handling input.value
+    handleSubmitClick = (e: MouseEvent) => {
+        this.say(this.input.value);
+
+        // Reset input value
+        this.input.value = "";
     };
 
     handleSendClick = (e: MouseEvent) => {
