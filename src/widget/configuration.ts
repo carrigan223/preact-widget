@@ -16,7 +16,7 @@ export const defaultConfiguration: IConfiguration = {
     headerTextColor: "#333",
     bubbleBackground: "black", //closed mobile button color
     bubbleAvatarUrl:
-        "https://buzzdelivery.org/wp-content/uploads/2021/04/logo_footer_v2.png",
+        "https://buzzdelivery.org/wp-content/uploads/2021/03/favicon_v2.png",
     desktopHeight: 450,
     desktopWidth: 370,
     mobileHeight: "100%",

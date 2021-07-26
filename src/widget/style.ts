@@ -98,12 +98,13 @@ export const desktopIntroMessageStyle = {
 
 export const desktopClosedMessageAvatarStyle = {
     display: "flex",
-    justifyContent: "center",
     position: "absolute",
-    top: "38px",
+    justifyContent: "center",
+    alignItems: "center",
+    top: "26px",
     right: "20px",
-    height: "60px",
-    width: "60px",
+    height: "70px",
+    width: "70px",
     border: 0,
     borderRadius: "50%",
     boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
@@ -114,7 +115,7 @@ export const mobileClosedMessageAvatarStyle = {
     position: "absolute",
     justifyContent: "center",
     alignItems: "center",
-    top: "46px",
+    top: "26px",
     right: "20px",
     height: "70px",
     width: "70px",
@@ -124,7 +125,7 @@ export const mobileClosedMessageAvatarStyle = {
 };
 
 export const closedChatAvatarImageStyle = {
-    width: "85%",
+    width: "65%",
     height: "auto",
     borderRadius: "999px",
 };
