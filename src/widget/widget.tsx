@@ -93,9 +93,9 @@ export default class Widget extends Component<any, IWidgetState> {
                     isChatOpen ? (
                         <div
                             style={{
-                                background: "rgb(209,184,83)",
-                                backgroundImage:
-                                    "linear-gradient(276deg, rgba(209,184,83,1) 8%, rgba(255,255,255,1) 100%)",
+                                background: "white",
+                                // backgroundImage:
+                                //     "linear-gradient(276deg, rgba(209,184,83,1) 8%, rgba(255,255,255,1) 100%)",
                                 ...desktopTitleStyle,
                             }}
                             onClick={this.toggle}
@@ -107,15 +107,15 @@ export default class Widget extends Component<any, IWidgetState> {
                                     padding: "0px 30px 0px 0px",
                                     fontSize: "15px",
                                     fontWeight: "normal",
-                                    color: "white",
+                                    color: "black",
                                 }}
                             >
                                 <img
-                                    style={{ height: "30px", width: "90px" }}
-                                    src="https://buzzdelivery.org/wp-content/uploads/2021/03/logo_v2.png"
+                                    style={{ height: "30px", width: "30px", marginRight: "10px" }}
+                                    src="https://buzzdelivery.org/wp-content/uploads/2021/03/favicon_v2.png"
                                     alt="logo"
                                 />
-                                {conf.title}
+                                <div>{conf.title}</div>
                             </div>
                             <ArrowIcon isOpened={isChatOpen} />
                         </div>

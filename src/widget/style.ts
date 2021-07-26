@@ -57,7 +57,7 @@ export const desktopTitleStyle = {
     boxSizing: "content-box",
     mozBoxSizing: "content-box",
     webkitBoxSizing: "content-box",
-    borderBottom: "2px solid black",
+    //borderBottom: "2px solid black",
 };
 
 export const mobileTitleStyle = {
