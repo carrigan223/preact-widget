@@ -71,6 +71,8 @@ export default class Chat extends Component<IChatProps, IChatState> {
 
     render({}, state: IChatState) {
         console.log("replytype", this.state.replyType);
+        console.log(this.state);
+        console.log(botman);
 
         return (
             <div>
@@ -169,7 +171,6 @@ export default class Chat extends Component<IChatProps, IChatState> {
             </div>
         );
     }
-
 
     //enter key submiting input.value
     handleKeyPress = (e: KeyboardEvent) => {

@@ -111,11 +111,15 @@ export default class Widget extends Component<any, IWidgetState> {
                                 }}
                             >
                                 <img
-                                    style={{ height: "30px", width: "30px", marginRight: "10px" }}
+                                    style={{
+                                        height: "30px",
+                                        width: "30px",
+                                        marginRight: "10px",
+                                    }}
                                     src="https://buzzdelivery.org/wp-content/uploads/2021/03/favicon_v2.png"
                                     alt="logo"
                                 />
-                                <div>{conf.title}</div>
+                                <div class="title">{conf.title}</div>
                             </div>
                             <ArrowIcon isOpened={isChatOpen} />
                         </div>

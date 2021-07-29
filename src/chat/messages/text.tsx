@@ -2,6 +2,8 @@ import { h, Component } from "preact";
 import MessageType from "./messagetype";
 import { IMessageTypeProps } from "../../typings";
 
+
+//this class is handling the different attachment types
 export default class TextType extends MessageType {
     render(props: IMessageTypeProps) {
         const message = props.message;
