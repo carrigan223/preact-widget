@@ -1,5 +1,3 @@
-
-
 export const desktopWrapperStyle = {
     position: "fixed",
     bottom: "60px",
@@ -53,7 +51,7 @@ export const desktopTitleStyle = {
     display: "flex",
     justifyContent: "space-between",
     padding: "5px 0 5px 20px",
-    fontFamily: "Raleway ,Lato, sans-serif",
+    fontFamily: "Raleway , Lato, sans-serif",
     color: "black",
     cursor: "pointer",
     boxSizing: "content-box",
