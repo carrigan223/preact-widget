@@ -120,7 +120,7 @@ export default class Widget extends Component<any, IWidgetState> {
                                     alt="logo"
                                 />
                                 <div style={{ fontFamily: "Raleway" }}>
-                                    {conf.title} 1,2,3
+                                    {conf.title}
                                 </div>
                             </div>
                             <ArrowIcon isOpened={isChatOpen} />
