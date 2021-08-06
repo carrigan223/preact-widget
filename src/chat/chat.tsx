@@ -73,6 +73,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
         console.log("replytype", this.state.replyType);
         console.log(this.state);
         console.log(botman);
+        console.log(this.botman.chatServer);
 
         return (
             <div>

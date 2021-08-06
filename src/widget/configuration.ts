@@ -7,7 +7,7 @@ export const defaultConfiguration: IConfiguration = {
     dateTimeFormat: "m/d/yy HH:MM",
     title: "BUZZ",
     cookieValidInDays: 1,
-    introMessage: "",
+    introMessage: "Welcome To Buzzbot",
     placeholderText: "Send a message...",
     displayMessageTime: true,
     sendWidgetOpenedEvent: false,
