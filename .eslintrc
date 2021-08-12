@@ -1,10 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": "eslint:recommended",
-  "plugins": [
-    "react",
-    "jest"
-  ],
+  "plugins": ["react", "jest"],
   "env": {
     "browser": true,
     "node": true,
@@ -50,7 +47,7 @@
     "semi": 2,
     "camelcase": 0,
     "comma-style": 2,
-    "comma-dangle": [2, "never"],
+    "comma-dangle": [2, "always-multiline"],
     "indent": [2],
     "no-mixed-spaces-and-tabs": [0, "smart-tabs"],
     "no-trailing-spaces": [2, { "skipBlankLines": true }],

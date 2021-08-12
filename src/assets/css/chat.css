@@ -4,8 +4,9 @@
 html,
 body {
     background-color: #f9f9f9;
-    font-family: "Open-Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
+    font-weight: bold;
     margin: 0;
     padding: 0;
 }

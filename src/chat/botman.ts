@@ -13,7 +13,7 @@ class BotMan {
     setChatServer(chatServer: string) {
         this.chatServer = chatServer;
     }
-
+	//handling the api call 
     callAPI = (text: string, interactive = false, attachment: IAttachment = null, perMessageCallback: Function, callback: Function) => {
     	let data = new FormData();
     	const postData: { [index: string] : string|Blob } = {
