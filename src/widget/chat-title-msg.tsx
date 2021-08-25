@@ -10,7 +10,10 @@ export default class ChatTitleMsg extends Component<any, any> {
     render({ conf }: IChatTitleMsgProps, {}) {
         return (
             <div
-                style={{ position: "relative", cursor: "pointer" }}
+                style={{
+                    position: "relative",
+                    cursor: "pointer",
+                }}
                 onClick={this.props.onClick}
             >
                 <div

@@ -120,7 +120,7 @@ export default class Widget extends Component<any, IWidgetState> {
                                     alt="logo"
                                 />
                                 <div style={{ fontFamily: "Raleway" }}>
-                                    {conf.title}
+                                    {conf.title}1,2,3
                                 </div>
                             </div>
                             <ArrowIcon isOpened={isChatOpen} />
@@ -177,6 +177,8 @@ export default class Widget extends Component<any, IWidgetState> {
             isChatOpen: false,
         });
     }
+
+  
 
     private sendOpenEvent() {
         let data = new FormData();

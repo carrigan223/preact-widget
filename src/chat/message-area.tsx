@@ -10,7 +10,7 @@ import MessageHolder from "./message-holder";
 
 export default class MessageArea extends Component<IMessageAreaProps, any> {
     render(props: IMessageAreaProps, {}) {
-        const styleChat = "height:" + (props.conf.wrapperHeight - 60) + "px;";
+        const styleChat = "height:" + (props.conf.wrapperHeight - 100) + "px;";
 
         let calculatedTimeout = 0;
         return (

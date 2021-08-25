@@ -14,7 +14,8 @@ export default class Chat extends Component<IChatProps, IChatState> {
 
         this.botman = botman;
         this.botman.setUserId(this.props.userId);
-        this.botman.setChatServer("https://buzz.feed-back.co/chatbot");//this.props.conf.chatServer
+        //set chat server here
+        this.botman.setChatServer("https://rmdevs.com/botman"); //this.props.conf.chatServer
         // this.state.messages = [];
         // this.state.replyType = ReplyType.Text;
         this.setState({ messages: [] });
@@ -58,6 +59,7 @@ export default class Chat extends Component<IChatProps, IChatState> {
         this.botman.callAPI(message.text, false, null, (msg: IMessage) => {
             msg.from = "chatbot";
             this.writeToMessages(msg);
+            console.log(msg);
         });
 
         if (showMessage) {
@@ -80,7 +82,6 @@ export default class Chat extends Component<IChatProps, IChatState> {
             <div>
                 {/*THIS IS THE CHAT WINDOW UNDER THE HEADER */}
                 <div id="messageArea">
-
                     <MessageArea
                         messages={state.messages}
                         conf={this.props.conf}
