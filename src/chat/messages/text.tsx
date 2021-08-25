@@ -16,7 +16,7 @@ export default class TextType extends MessageType {
                 {/* {the line below will display the actual text} */}
                 <p dangerouslySetInnerHTML={textObject} />
                 {/* below this is my protype for the card display */}
-                {/* <div
+                <div
                     style={{
                         display: "flex",
                         overflow: "scroll",
@@ -332,7 +332,7 @@ export default class TextType extends MessageType {
                             More/less
                         </a>
                     </div>
-                </div> */}
+                </div>
                 {/* end prottype */}
                 {attachment && attachment.type === "image" ? (
                     <img src={attachment.url} style="max-width: 100%;" />
