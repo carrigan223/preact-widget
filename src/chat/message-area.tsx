@@ -14,7 +14,7 @@ export default class MessageArea extends Component<IMessageAreaProps, any> {
 
         let calculatedTimeout = 0;
         return (
-            <ol class="chat" style={styleChat}>
+            <div class="chat" style={styleChat}>
                 {props.messages.map((message) => {
                     const listElement = (
                         <MessageHolder
@@ -29,7 +29,7 @@ export default class MessageArea extends Component<IMessageAreaProps, any> {
 
                     return listElement;
                 })}
-            </ol>
+            </div>
         );
     }
 }

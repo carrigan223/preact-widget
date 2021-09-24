@@ -119,8 +119,8 @@ export default class Widget extends Component<any, IWidgetState> {
                                     src="https://buzzdelivery.org/wp-content/uploads/2021/03/favicon_v2.png"
                                     alt="logo"
                                 />
-                                <div style={{ fontFamily: "Raleway" }}>
-                                    {conf.title}1,2,3
+                                <div>
+                                    {conf.title}
                                 </div>
                             </div>
                             <ArrowIcon isOpened={isChatOpen} />

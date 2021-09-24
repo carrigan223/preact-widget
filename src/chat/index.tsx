@@ -8,6 +8,8 @@ if (window.attachEvent) {
     window.addEventListener('load', injectChat, false);
 }
 
+//instatiating an object to be populated by the
+//configuration file
 let conf = {} as IConfiguration;
 
 const confString = getUrlParameter('conf');
@@ -19,6 +21,8 @@ if (confString) {
     }
 }
 
+//this is where the the chat is being injected into our html element
+//creating a dom element with the injection of the script tag
 function injectChat() {
     let root = document.createElement('div');
     root.id = 'botmanChatRoot';
@@ -33,6 +37,7 @@ function injectChat() {
     );
 }
 
+//?????
 function getUrlParameter(name: string) {
     name = name.replace(/[[]/, '\\[').replace(/[]]/, '\\]');
     let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');

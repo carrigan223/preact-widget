@@ -1,13 +1,13 @@
 import { IConfiguration } from "../typings";
 
 export const defaultConfiguration: IConfiguration = {
-    chatServer: "https://rmdevs.com/botman",
+    chatServer: "/botman",
     frameEndpoint: "/botman/chat",
     timeFormat: "HH:MM",
     dateTimeFormat: "m/d/yy HH:MM",
     title: "BUZZ",
     cookieValidInDays: 1,
-    introMessage: "Welcome To Buzzbot",
+    introMessage: "",
     placeholderText: "Send a message...",
     displayMessageTime: true,
     sendWidgetOpenedEvent: false,

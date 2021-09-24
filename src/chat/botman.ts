@@ -27,6 +27,8 @@ class BotMan {
     	Object.keys(postData).forEach(key => data.append(key, postData[key]));
 
     	axios.post(this.chatServer, data).then(response => {
+			console.log(postData);
+
     		const messages = response.data.messages || [];
 
 			if (perMessageCallback) {

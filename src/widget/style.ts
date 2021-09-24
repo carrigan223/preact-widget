@@ -25,10 +25,11 @@ export const mobileClosedWrapperStyle = {
     bottom: "0px",
     right: "0px",
     zIndex: 2147483647,
-    minWidth: "400px",
+    minWidth: "120px",
     boxSizing: "content-box",
     overflow: "hidden",
     minHeight: "120px",
+
 };
 
 export const mobileOpenWrapperStyle = {
@@ -112,11 +113,11 @@ export const desktopClosedMessageAvatarStyle = {
 
 export const mobileClosedMessageAvatarStyle = {
     display: "flex",
-    position: "absolute",
+    // position: "absolute",
     justifyContent: "center",
     alignItems: "center",
-    top: "26px",
-    right: "20px",
+    // top: "26px",
+    // right: "20px",
     height: "70px",
     width: "70px",
     border: 0,
